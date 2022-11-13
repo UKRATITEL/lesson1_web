@@ -1,9 +1,18 @@
+@font-face{
+    font-family: 'comforta';
+    font-style:normal;
+    font-weight:300;
+    src:url(s/comfortaa/v40/1Pt_g8LJRfWJmhDAuUsSQamb1W0lwk4S4TbMPrQ.ttf)
+    format('truetype')
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: --;
     font-size: 32px;
+    font-family: comforta
 }
 
 body {
@@ -19,6 +28,12 @@ ul {
     transform: skewY(-15deg)
 }
 
+ul.second {
+    position: relative;
+    transform: skewY(-15deg);
+    left: 15vh
+}
+
 ul li {
     position: relative;
     list-style: none;
@@ -28,6 +43,16 @@ ul li {
     z-index: var(--i);
     transition: .5s;
 
+}
+
+ul li img{
+    position: absolute;
+    left: -35px;
+    bottom: 11px;
+    width: 31px;
+    height: 70%;
+    transform-origin: right;
+    transform: skewY(45deg)
 }
 
 ul li:hover {
