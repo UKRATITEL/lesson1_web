@@ -39,12 +39,21 @@ body {
     }
 }
 
+@keyframes anim_cube .cube .smal span {
+    0%{
+        transform: rotateX(-10deg) rotateY(180deg)
+    }
+    100%{
+        transform: rotateX(-10deg) rotateY(180deg)
+    }
+}
+
 .cube .big span {
     position: absolute;
     width: 600px;
     height: 600px;
     background: var(--clr);
-    transform: rotateY(calc(90deg * var(--i))translateZ(299px));
+    transform: rotateY(calc(90deg * var(--i))) translateZ(299px);
     transform-style: preserve-3d;
     transition: .5s;
     box-shadow: 0px 0px 100px;
@@ -66,7 +75,39 @@ body {
 .cube .big span.bottom::before{
     content: "";
     position: absolute inset: 0;
-    transform: translateY(-650deg);
+    transform: translateY(-10deg);
+    background: rgba(0,0,0,0.5);
+    filter: blur(60px)
+}
+
+.cube .smal span {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: var(--clr);
+    transform: rotateY(calc(90deg * var(--i))) translateZ(50px);
+    transform-style: preserve-3d;
+    transition: .5s;
+    box-shadow: 0px 0px 100px;
+}
+
+.cube .smal span {
+    background: transparent;
+    border: 10px solid #8f0dff;
+}
+
+.cube .smal span.top{
+    transform: rotateX(90deg) translateZ(50px);
+}
+
+.cube .smal span.bottom{
+    transform: rotateX(90deg) translateZ(-50px);
+}
+
+.cube .smal span.bottom::before{
+    content: "";
+    position: absolute inset: 0;
+    transform: translateY(-10deg);
     background: rgba(0,0,0,0.5);
     filter: blur(60px)
 }
